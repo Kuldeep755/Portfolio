@@ -1,37 +1,39 @@
-const navMenu =document.getElementById('nav-menu'),
-toggleMenu =document.getElementById('nav-toggle'),
-closeMenu=document.getElementById('nav-close')
+const navMenu = document.getElementById('nav-menu');
+const toggleMenu = document.getElementById('nav-toggle');
+const closeMenu = document.getElementById('nav-close');
 
-toggleMenu.addEventListener('click',()=>{
-    navMenu.classList.toggle('show')
-})
-closeMenu.addEventListener('click',()=>{
-    navMenu.classList.remove('show')
-})
+toggleMenu.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
 
-const navlink=document.querySelectorAll('nav_link')
-function linkAction(){
-    navMenu.classList.remove('show')
+closeMenu.addEventListener('click', () => {
+  navMenu.classList.remove('show');
+});
+
+const navLinks = document.querySelectorAll('.nav_link');
+
+function linkAction() {
+  navMenu.classList.remove('show');
 }
-navlink.forEach(n=> n.addEventListener('click',linkAction))
 
+navLinks.forEach(link => link.addEventListener('click', linkAction));
 
-const section=document.querySelectorAll('section[id]')
-window.addEventListener('scroll', scrollActive)
+const sections = document.querySelectorAll('section[id]');
 
+function scrollActive() {
+  const scrollY = window.pageYOffset;
 
-function scrollActive(){
-    const scrolly =window.pageYOffset
-    section.forEach(current => {
-        const sectionHeight =current.offsetHeight
-        const sectionTop =current.offsetTop -50
-        sectionId = current.getAttribute("id")
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute('id');
 
-        if( scrolly > sectionTop && scrolly <= sectionTop + sectionHeight){
-            document.querySelectorAll('.nav_menua[href*='+ sectionId + ']').classList.add('active')
-        }
-        else{
-            document.querySelectorAll('.nav_menua[href*='+ sectionId + ']').classList.add('active')
-        }
-    })
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector(`.nav_menu a[href*=${sectionId}]`).classList.add('active');
+    } else {
+      document.querySelector(`.nav_menu a[href*=${sectionId}]`).classList.remove('active');
+    }
+  });
 }
+
+window.addEventListener('scroll', scrollActive);
