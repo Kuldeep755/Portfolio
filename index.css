@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600&family=Lato:wght@100&display=swap');
 :root{
     --header-height:3rem;
-    --nav-width:324;
+    --nav-width:324px;
+    /* Font Weight*/
     --font-medium:500;
     --font-semi-bold:600;
     --font-bold:700;
@@ -16,8 +17,8 @@
     --h1-font-size:1.5rem;
     --h2-font-size:1.25rem;
     --h3-font-size:1rem;
-    --normal-font-size:938em;
-    --samll-font-size:813rem;
+    --normal-font-size: .938em;
+    --samll-font-size: .813rem;
     --smaller-font-size:.75rem;
 
     --mb-1: .5rem;
@@ -97,7 +98,7 @@ img{
     display: grid;
     grid-template-columns: 100%;
     column-gap: 2rem;
-    width: calc(100% -2rem);
+    width: calc(100% - 2rem);
     margin-left:var(--mb-2);
     margin-right:var(--mb-2);
 }
@@ -108,7 +109,7 @@ img{
     left:0;
     z-index:var(--z-fixed);
     background-color:var(--first-color-lighten);
-    box-shadow:1 2px 4px rgb(0,0,0,1)
+    box-shadow:0 2px 4px rgb(0,0,0,1)
 }
 .nav{
     height:var(--header-height);
@@ -121,7 +122,7 @@ img{
     position: fixed;
     top: 0;
     left: -100%;
-    width: 60%;
+    width: 70%;
     height:100vh;
     padding: 3rem;
     display: flex ;
@@ -163,7 +164,7 @@ img{
     color: var(--text-color);
 }
 .home_container{
-    height: calc(100vh -var(--header-height));
+    height: calc(100vh - var(--header-height));
     align-items: center;
 }
 .home_data{
@@ -193,7 +194,7 @@ img{
 
 }
 .home_profession{
-    font-size:var(--smaller-font-size);
+    font-size:var(--small-font-size);
     color:var(--first-color-dark);
     margin-bottom: var(--mb-5);
 
@@ -250,7 +251,7 @@ img{
 }
 .about_img{
     width: 150px;
-    border-radius: 5rem;
+    border-radius: .5rem;
     margin: 0 auto;
 }
 
@@ -301,7 +302,7 @@ img{
 }
 .skills_bar{
     position: absolute;
-    bottom:-.75rem;
+    bottom: -.75rem;
     height: .25rem;
     background-color: var(--first-color);
 }
@@ -372,7 +373,7 @@ img{
 .services_content{
     padding: 1.5rem  .5rem;
     border: 2px solid var(--first-color);
-    border-radius: 2rem;
+    border-radius: .5rem;
     text-align: center;
 }
 .services_icon{
@@ -512,7 +513,7 @@ img{
         text-align: initial;
     }
     .about_description{
-        margin-bottom: var(--mb-5); 
+        margin-bottom: var(--mb-4); 
     }
     .about_img{
         width: 220px;
@@ -550,6 +551,9 @@ img{
         padding-left: 3rem;
     }
     .footer{
+        background: none;
+    }
+    .footer{
         background-color: var(--first-color-darken);
         padding: 3rem 0;
         border-radius: .5rem;
@@ -572,6 +576,7 @@ img{
     .home_container{
         height: 100vh;
     }
+   
     .section{
         padding: 3rem 0 2rem;
     }
@@ -583,7 +588,6 @@ img{
         grid-template-columns: repeat(2, 1);
     }
 }
-
 
 
 
