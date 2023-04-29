@@ -2,6 +2,7 @@
 :root{
     --header-height:3rem;
     --nav-width:324px;
+  
     /* Font Weight*/
     --font-medium:500;
     --font-semi-bold:600;
@@ -28,6 +29,11 @@
     --mb-5: 2.5rem;
 
     --z-fixed:100;
+}
+
+.nav_logo{
+    font-size: 20px;
+    padding: 10px;
 }
 @media screen and (min-width:768px){
     :root{
@@ -88,7 +94,7 @@ img{
 .section-subtitle{
     display: block;
     font-size: var(--small-font-size);
-    color: var(--first-color-dark);
+    color: var(--first-color-darken);
     font-weight: var(--font-bold);
     text-align: center;
     margin-bottom: .25rem;
@@ -199,10 +205,10 @@ img{
     margin-bottom: var(--mb-5);
 
 }
-.home_soical{
+.home_social{
     margin-bottom: 5rem;
 }
-.home_soical-link{
+.home_social-link{
     display: inline-flex;
     background-color: var(--first-color);
     color: var(--first-color-lighten);
@@ -212,7 +218,7 @@ img{
     margin: 0 var(--mb-1);
     transition: .3s;
 }
-.home_soical-link:hover{
+.home_social-link:hover{
     background-color: var(--first-color-dark);
 }
 .home_button{
@@ -270,7 +276,7 @@ img{
     margin-bottom: var(--mb-3);
 }
 .about_information-icon{
-    font-size:1.5rem;
+    font-size: 1.5rem;
     color: var(--first-color);
     margin-right: var(--mb-4);
 }
@@ -587,7 +593,22 @@ img{
     .services_container{
         grid-template-columns: repeat(2, 1);
     }
+    .about_data{
+        text-align: initial;
+        align-items: center;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
